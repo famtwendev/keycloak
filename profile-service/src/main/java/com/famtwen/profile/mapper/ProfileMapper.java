@@ -1,12 +1,14 @@
-package com.devteria.profile.mapper;
+package com.famtwen.profile.mapper;
 
-import com.devteria.profile.dto.request.RegistrationRequest;
-import com.devteria.profile.dto.response.ProfileResponse;
-import com.devteria.profile.entity.Profile;
 import org.mapstruct.Mapper;
+
+import com.famtwen.profile.dto.request.RegistrationRequest;
+import com.famtwen.profile.dto.response.ProfileResponse;
+import com.famtwen.profile.entity.Profile;
 
 @Mapper(componentModel = "spring")
 public interface ProfileMapper {
     Profile toProfile(RegistrationRequest request);
+
     ProfileResponse toProfileResponse(Profile profile);
 }

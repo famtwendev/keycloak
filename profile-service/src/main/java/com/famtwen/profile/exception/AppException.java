@@ -1,4 +1,4 @@
-package com.devteria.profile.exception;
+package com.famtwen.profile.exception;
 
 public class AppException extends RuntimeException {
 

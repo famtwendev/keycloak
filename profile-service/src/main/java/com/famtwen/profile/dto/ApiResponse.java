@@ -1,4 +1,6 @@
-package com.devteria.profile.dto.identity;
+package com.famtwen.profile.dto;
+
+import com.fasterxml.jackson.annotation.JsonInclude;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -8,12 +10,15 @@ import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Builder
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class Credential {
-    String type;
-    String value;
-    boolean temporary;
+@JsonInclude(JsonInclude.Include.NON_NULL)
+public class ApiResponse<T> {
+    @Builder.Default
+    private int code = 1000;
+
+    private String message;
+    private T result;
 }

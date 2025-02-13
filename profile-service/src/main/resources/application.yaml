@@ -8,3 +8,14 @@ spring:
   data:
     mongodb:
       uri: mongodb://root:root@localhost:27017/profile-service?authSource=admin
+
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: http://localhost:8180/realms/famtwen
+
+idp:
+  url: ${URL_IDP:http://localhost:8180}
+  client-id: famtwen_app
+  client_secret: pKkaE8cU0ItcyZ6HfhVjd8wAC9o87H2V

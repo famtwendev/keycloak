@@ -1,4 +1,4 @@
-package com.devteria.profile.dto.identity;
+package com.famtwen.profile.dto.identity;
 
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;

@@ -1,15 +1,18 @@
-package com.devteria.profile.dto.request;
+package com.famtwen.profile.dto.request;
 
+import java.time.LocalDate;
+
+import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Size;
+
+import org.springframework.format.annotation.DateTimeFormat;
+
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.experimental.FieldDefaults;
-import org.springframework.format.annotation.DateTimeFormat;
-
-import java.time.LocalDate;
 
 @Data
 @NoArgsConstructor
@@ -20,11 +23,14 @@ public class RegistrationRequest {
     @Size(min = 4, message = "INVALID_USERNAME")
     String username;
 
+    @NotEmpty(message = "Password is required")
     @Size(min = 6, message = "INVALID_PASSWORD")
     String password;
 
     String email;
+
     String firstName;
+
     String lastName;
 
     @DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
