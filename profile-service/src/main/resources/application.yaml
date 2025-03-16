@@ -18,4 +18,4 @@ spring:
 idp:
   url: ${URL_IDP:http://localhost:8180}
   client-id: famtwen_app
-  client_secret: pKkaE8cU0ItcyZ6HfhVjd8wAC9o87H2V
+  client_secret: <client_secret>
